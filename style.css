@@ -1,0 +1,88 @@
+:root {
+    --accent-color: #aa0405;
+    --primary-color: #32b1d0;
+    --secondary-color: #ed6f5d;
+}
+
+html, * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 90%);
+    display: flex;
+}
+
+#sidebar {
+    height: 100vh;
+    background-color: white;
+    box-shadow: 0px 0 60px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sidebarImage {
+    width: 700px;
+    margin: 20px -30px;
+    flex-grow: 0;
+}
+
+#buttonContainer {
+    width: 100%;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sidebarButton {
+    width: 50%;
+    height: 50px;
+    border: none;
+    border-radius: 48px;
+}
+
+.sidebarButton:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 0 var(--accent-color);
+    transition: 0.1s ease-in-out;
+}
+
+.sidebarButton:active {
+    background-color: var(--primary-color);
+    transform: translateY(0px);
+    transition: 0.1s ease-in-out;
+    box-shadow: none;
+}
+
+#mainContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#gridContainer {
+    /* -- Found out the exercise asks to do this through JS -- */
+    /* display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16,1fr);*/
+    background-color: white;
+    height: 90vh;
+    width: 90vh;
+    border: 20px solid var(--secondary-color);
+    border-radius: 5vh;
+    box-shadow: 0 2vh 0 var(--accent-color);
+    transform: translateY(-1vh);
+}
