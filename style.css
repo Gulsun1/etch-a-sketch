@@ -15,6 +15,7 @@ body {
     overflow: hidden;
     background-color: hsl(0, 0%, 90%);
     display: flex;
+    font-family: 'Nunito Sans';
 }
 
 #sidebar {
@@ -31,6 +32,32 @@ body {
     margin: 20px -30px;
     flex-grow: 0;
 }
+
+#sliderContainer {
+    margin: 12px auto;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#sliderValue {
+    display: inline-block;
+    width: 10px;
+    margin: 16px;
+}
+#gridSizeSlider {
+    width: 256px;
+    cursor: grab;
+}
+
+#gridSizeSlider:active {
+    cursor: grabbing;
+}
+
+
 
 #buttonContainer {
     width: 100%;
@@ -74,10 +101,9 @@ body {
 }
 
 #gridContainer {
-    /* -- Found out the exercise asks to do this through JS -- */
-    /* display: grid;
+    display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16,1fr);*/
+    grid-template-rows: repeat(16,1fr);
     background-color: white;
     height: 90vh;
     width: 90vh;
@@ -85,4 +111,11 @@ body {
     border-radius: 5vh;
     box-shadow: 0 2vh 0 var(--accent-color);
     transform: translateY(-1vh);
+    box-sizing: border-box;
+    padding: 20px;
 }
+
+.gridCell {
+    border: 1px solid rgb(150,150,150);
+}
+
